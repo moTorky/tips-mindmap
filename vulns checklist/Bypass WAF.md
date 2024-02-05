@@ -1,0 +1,4 @@
+try to hunt behind the WAF be find the original IP for the site, use shodan, hunter.dev to find it 
+
+> [!NOTE] techniqe
+> you can try; many more exist. For example, you can hex-encode, URL-encode, double-URL-encode, and vary the cases (uppercase or lowercase characters) of your payloads. You can also try to insert special characters such as null bytes, newline charac- ters, escape characters (\), and other special or non-ASCII characters into the payload. Then, observe which payloads are blocked and which ones succeed, and craft exploits that will bypass the filter to accomplish your desired results

@@ -1,0 +1,6 @@
+- company’s **job posts** on LinkedIn
+- employees’ Google calendars: If an employee shares their calendars with the public by accident
+- company’s SlideShare or Pastebin accounts: [PasteHunter](https://github.com/kevthehermit/PasteHunter/)
+-  info leaked in shared images at social media  
+- Tech Stack Fingerprinting: [StackShare](https://stackshare.io/) is an online platform that allows developers to share the tech they use. You can use it to find out if the organization’s developers have posted their tech stack
+- Retire.js is a tool that detects outdated JavaScript libraries and Node.js packages. You can use it to check for outdated technologies on a site.

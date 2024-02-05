@@ -1,0 +1,6 @@
+vulnerability where a user of one role or group is able to access the API functionality of another role or group. either functions of a similarly privileged group, or it could be a privilege escalation.
+- BOLA is about unauthorized access, whereas BFLA is about unauthorized actions.
+> An API won’t always use administrative endpoints for administrative functionality. Instead, the functionality could be based on HTTP request methods such as GET, POST, PUT, and DELETE. If a provider doesn’t restrict the HTTP methods a consumer can use, simply making an unauthorized request with a different method could indicate a BFLA vulnerability.
+#### test for it
+- The easiest way to discover BFLA is to find administrative API documentation/reverse engineer  and send requests as an unprivileged user, If access controls are in place, you’ll likely receive an HTTP 401 Unauthorized or 403 Forbidden response, if not you have discovered a BFLA vulnerability
+- second way is make new client and test every action using his API-key/token

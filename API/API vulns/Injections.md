@@ -1,0 +1,2 @@
+this result of lack of input sanitization Security Misconfigurations
+inject some SQL, Non-SQL `DELETE /api/bookings?bookingId[$ne]=678`, LDAP, OS command `appid=$(/etc/pod/power_down.sh)`injections in body, or url parameters , may the API pass your data directly to DBMS

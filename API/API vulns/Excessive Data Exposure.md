@@ -1,0 +1,3 @@
+- is when an API endpoint responds with more information than is needed to fulfill a request.
+- occurs when the provider expects the API consumer to filter results
+- ex request to `/api/v3/account?name=devMRT` get response with person who created that account including the administrator’s full name, the admin’s ID number, or other infos

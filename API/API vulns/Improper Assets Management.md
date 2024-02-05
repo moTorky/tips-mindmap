@@ -1,0 +1,8 @@
+Improper assets management takes place when an organization exposes APIs that are either retired or still in development
+- old API versions are more likely to contain vulnerabilities because they are no longer being patched and upgraded such as /v1/, /v2/, /v3/
+- APIs that are still being developed are typically not as secure as their production API counterparts. such as /alpha/, /beta/, /test/, /uat/, and /demo/
+- Improper assets management can lead to other vulnerabilities, such as excessive data exposure, information disclosure, mass assignment, improper rate limiting, and API injection.
+- You can discover improper assets management by paying close attention to outdated API documentation, changelogs, and version history on repositories.
+- Outside of using documentation, you can discover improper assets management vulnerabilities through the use of guessing, fuzzing, or brute-force requests. Watch for patterns in the API documentation or path-naming scheme, and then make requests based on your assumptions
+- OWASP ex: 
+>A social network implemented a rate-limiting mechanism that blocks attackers from using brute-force to guess reset password tokens. This mechanism wasn’t implemented as part of the API code itself, but in a separate component between the client and the official API (www.socialnetwork.com). A researcher found a beta API host (www.mbasic.beta.socialnetwork.com) that runs the same API, including the reset password mechanism, but the rate limiting mechanism was not in place. The researcher was able to reset the password of any user by using a simple brute-force to guess the 6 digits token.
