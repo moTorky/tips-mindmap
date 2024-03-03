@@ -96,7 +96,7 @@ Here are the most common types of ***external entity*** declarations:
 > - Patch or upgrade all XML processors and libraries in use by the application or on the underlying operating system. Use dependency checkers. Update SOAP to SOAP 1.2 or higher.
 ### hunt for it
 1. Find **XML Data Entry Points**
-	- browse the app function and find these XML entry points by decoding any blocks of data that look suspicious, search for `"<?xml"` or base64 `LD94bWw`, url-encode `` 
+	- browse the app function and find these XML entry points by decoding any blocks of data that look suspicious, search for `"<?xml"` or base64 `LD94bWw`, url-encode `%3C%3Fxml` 
 	- you should also look for [[file upload]] features because XML forms the basis of many XML file types. If you can upload one of these file types (XML, HTML, DOCX, PPTX, XLSX, GPX, PDF, SVG, RSS feeds, metadata embedded within images like GIF, PNG, JPEG), you might be able to smuggle XML input to the application’s XML parser. SOAP web services are also XML based
 	- In addition to looking for locations where the application accepts XML data by default, you can try to force the application into parsing XML data. send xml to endpoints take plaintext or JSON and change `Content-Type: text/xml` or `Content-Type: application/xml`
 	- some applications receive user-submitted data and embed it into an XML document on the server side, you can submit an `XInclude` test payload to the endpoint
@@ -143,7 +143,7 @@ What you can achieve with an XXE vulnerability depends on the permissions given 
 	<!ENTITY portScan SYSTEM "http://10.0.0.1:80">
 	]> 
 	<example>&file;</example>
-	<scan>&portScan</scan>	
+	<scan>&portScan;</scan>	
 	```
 - Blind XXE
 	to exfiltrate data via a blind XXE, you have to host an external DTD on your server. Try hosting a file named xxe.dtd on your server:

@@ -1,3 +1,4 @@
 - is when an API endpoint responds with more information than is needed to fulfill a request.
 - occurs when the provider expects the API consumer to filter results
 - ex request to `/api/v3/account?name=devMRT` get response with person who created that account including the administrator’s full name, the admin’s ID number, or other infos
+- When testing for excessive data exposure on a large scale, it’s best to use a tool like Postman’s Collection Runner, which helps you make many requests quickly and provides you with an easy way to review the results. If the provider responds with more information than you needed, you could have found a vulnerability.

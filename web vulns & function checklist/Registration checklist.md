@@ -1,0 +1,27 @@
+
+- Input validation
+	- [ ]  Space manipulation & Using Dots & Case sensivity check
+	- [ ]  Checking allowed characters (`<> " '`)
+	- [ ]  Register using `myemail%00@email.com` or `%0d%0a`, `%` check this [815085](https://hackerone.com/reports/815085)
+	- [ ]  Register using `myemail@target.com`
+		- Response manipulate from `401 Unauthorized` to `200 Ok` or `302 Found`
+	- [ ] where the data flittered. when it displayed back to user or before get saved. if data filtered while it displayed then check every place your data displayed such:
+		- mobile app, interact with the site (making a post, adding someone)
+- Analysis
+	- [ ]  Check `.js` file on the page, such as `login.js`
+	- [ ]  Check the parameters used on the endpoint
+		- Might be listed in the `source` or `js`
+	- [ ]  Checking the Mobile Endpoint
+		- Does it have the same protection as webapp? => stored [[XSS]]
+		- How does it treat Unicode characters?
+	- [ ]  [[Google dorks]]
+		- `site:example.com inurl:register inurl:&`
+		- `site:example.com inurl:signup inurl:&`
+		- `site:example.com inurl:join inurl:&`
+- Misc
+	- [ ] trusted info from social media accounts
+		- test [[OAuth]] dance
+		- on your social media account add a payload in place could be imported to the tested site, such name your FaceBook album `<script>alert(0)</script>`, then import your album to the site
+	- [ ]  Email Takeover
+		- Register an Email, before confirming, change the email. check if the new confirmation email is sent to the first registered email.
+	- [ ] [[Open redirect]] on visiting register page after signing up

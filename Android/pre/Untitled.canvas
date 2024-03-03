@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"b604436c35d9cb43","x":20,"y":-220,"width":290,"height":191,"color":"1","type":"group","label":"apk files"},
+		{"id":"6597f2a899096a85","type":"text","text":"java code/high level lang","x":-525,"y":84,"width":250,"height":60},
+		{"id":"58e3d440e657e6c8","type":"text","text":"Smali/assembly code for DEX","x":-160,"y":200,"width":280,"height":60},
+		{"id":"0bebc653a460c7ab","type":"text","text":".class files","x":-320,"y":-109,"width":140,"height":60},
+		{"id":"1f27461d77b79315","type":"text","text":"classes.dex/Dalvik_format/binary_code/byte_code","x":40,"y":-109,"width":250,"height":60},
+		{"id":"27070483a2e71ac8","type":"text","text":"APK","x":480,"y":50,"width":100,"height":64},
+		{"id":"d6b265d6a7870b4d","type":"text","text":"other resources => file/imges","x":40,"y":-200,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"ae63cde9f6b0979a","fromNode":"1f27461d77b79315","fromSide":"bottom","toNode":"58e3d440e657e6c8","toSide":"right","label":"Disassemblers\n baksmali"},
+		{"id":"20db63da6671fc7c","fromNode":"58e3d440e657e6c8","fromSide":"left","toNode":"6597f2a899096a85","toSide":"bottom","label":"Decompilers"},
+		{"id":"3c35db8e2804d216","fromNode":"6597f2a899096a85","fromSide":"top","toNode":"0bebc653a460c7ab","toSide":"left","label":"java compilers"},
+		{"id":"7320fe3bc3ba18f4","fromNode":"0bebc653a460c7ab","fromSide":"right","toNode":"1f27461d77b79315","toSide":"left","label":"dex"},
+		{"id":"18f71ad1e9283826","fromNode":"b604436c35d9cb43","fromSide":"right","toNode":"27070483a2e71ac8","toSide":"top","label":"apkbuilder"},
+		{"id":"60735f687036df38","fromNode":"27070483a2e71ac8","fromSide":"bottom","toNode":"b604436c35d9cb43","toSide":"bottom","color":"1","label":"apktool d file.apk"},
+		{"id":"9646dba0f8f25c49","fromNode":"58e3d440e657e6c8","fromSide":"top","toNode":"1f27461d77b79315","toSide":"bottom","label":"assembler\nsmali\n"},
+		{"id":"f620ea180b333f40","fromNode":"27070483a2e71ac8","fromSide":"bottom","toNode":"58e3d440e657e6c8","toSide":"right"},
+		{"id":"5e24373cbc45c5d4","fromNode":"1f27461d77b79315","fromSide":"left","toNode":"6597f2a899096a85","toSide":"right","label":"dex2jar"}
+	]
+}

@@ -21,6 +21,8 @@ Start by casting a wide net using an array of tools to collect data. Then perfor
    `inurl:"/includes/api/" intext:"index of /"`
    `ext:php inurl:"api.php?action="`
    `intitle:"index of" api_key OR "api key" OR apiKey -pool`
+   `company_name developer docs`
+   `company_name inurl:swagger`
 2. **Shodan**: to discover external-facing APIs and get information about your target’s open ports> 
    `hostname:"targetname.com"` ,`"content-type: application/json"`  ,use shodan browser extensions
 3. get info about API using https://apis.guru/
@@ -35,7 +37,7 @@ Start by casting a wide net using an array of tools to collect data. Then perfor
 	   - `amass enum -active -d <target domain>` which try attempt DNS zone transfers, and grab SSL certificate info
 	   - brute-force subdomains: `amass enum -active -brute -w wordlists/API_superlist -d <target domain> -dir [directory name]`
 	   - `amass viz -enum -d3 -dir <directory name>`: visualize relationships between the data Amass returns, and generate HTML web page
-1. **Github**: could reveal your target’s API capabilities, documen- tation, and secrets, such as admin-level API keys, passwords, and tokens.
+1. **Github**: could reveal your target’s API capabilities, documentation, and secrets, such as admin-level API keys, passwords, and tokens.
 	1. search for target name with words like "api key,” "api keys", "apikey", "authorization: Bearer", "access_token", "secret", or “token.” , use `Pastehunter` tool to find exposed sensitive information
 	2. Code scan to find endpoints, find vulns/changes on old commits
 	3. find software bugs in the Issues tab
@@ -81,7 +83,7 @@ The process is not linear: after each phase of increasingly targeted scanning, y
 	works well for a quick scan of a web application to discover URL paths,
 	2. Finding Hidden Paths in Robots.txt
 	3. `gobuster dir -u http://target.com -w wordlist  -x 200,202,301 -b 302` 
-	   wordlist from [Assetnote API wordlists](http://wordlists.assetnote.io).
+	   wordlist from [Assetnote API wordlists](http://wordlists.assetnote.io), https://gist.github.com/yassineaboukir/8e12adefbd505ef704674ad6ad48743d/
 7. Discovering API Content with Kiterunner
 	Kiterunner will not only use all HTTP request methods common with APIs (GET, POST, PUT, and DELETE) but also mimic common API path structures.
 	`kr scan http://192.168.1.2:8090 -w ~/api/wordlists/data/kiterunner/routes-large.kite`

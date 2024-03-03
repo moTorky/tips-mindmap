@@ -1,0 +1,4 @@
+- [ ] [[CSRF]]
+- [ ] Any second confirmation on updated data => [[XSS]]
+- [ ] update your account from mobile, check BOLA
+- [ ] image/video uploads, even if it saved to `example-cdn.com`, cdn site could included in CSP  
