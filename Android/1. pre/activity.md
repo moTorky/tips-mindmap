@@ -26,4 +26,15 @@ onDestory()
 
 **Intent** is the way to move from one activity to other, this intent can have data passed with it to the other activity, if this data is sensitive in nature, you would have an _information leakage vuln_. this is exploitable by all application capable of communicating with the activity
 
+###### exported activities
+so can `A.activatyA` starts `B.activatyB`:   yes if
+1. `android:exported=true` defined as attribute on the `activity` tag in `manifest.xml`
+2. an `intent-filter` defined inside `activity` that not define value for `android:exported`.
+   ```xml
+   <activity>
+	   <intent-filter />
+   </activity>
+   ```
+   so if `activity` have defind `android:exported=false` then it only allow intents from same app
+
 [file:///F:/Courses/04-Android/Udacity%20-%20Android%20Basics%20Nanodegree%20by%20Google%20v1.0.0/Part%2003-Module%2001-Lesson%2001_Intents%20and%20Activities/index.html](file:///F:/Courses/04-Android/Udacity%20-%20Android%20Basics%20Nanodegree%20by%20Google%20v1.0.0/Part%2003-Module%2001-Lesson%2001_Intents%20and%20Activities/index.html)

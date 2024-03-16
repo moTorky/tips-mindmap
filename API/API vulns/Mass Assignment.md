@@ -34,3 +34,8 @@ $arjun --headers "Content-Type: application/json]" -u http://vulnhost.com/api/re
  "password":"Password1!" 
  }
 ```
+
+
+> [!NOTE] Title
+> - If you are able to perform a mass assignment, then there is a chance that the parameter or parameters that you can alter may not be protected from injection attacks and/or Server-side Request Forgery. When you have discovered mass assignment fuzz the parameter for other weaknesses.
+

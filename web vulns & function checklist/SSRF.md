@@ -2,7 +2,7 @@
 > a vulnerability that lets an attacker send requests on behalf of a server, which allowing them to assume a privileged position on a network, bypass firewall controls, and gain access to internal services
 ### types
 1. regular SSRF 
-2. blind SSRF, the attacker does not receive feedback from the server via an HTTP response or an error message. can found via out-of-band DNS resolve request, or out-of-band HTTP request and then monitor your server logs, look for the server request headers
+2. blind SSRF, the attacker does not receive feedback from the server via an HTTP response or an error message. can found via out-of-band DNS resolve request, or out-of-band HTTP request and then monitor your server logs, look for the server request headers 
 ### Prevention
 if the server does not make a distinction between internal and external resources this cuz the vulnerability, Two main types of protection against SSRFs exist: 
 1. blocklists, The server will block a request if it contains a blocklisted address as input
@@ -17,7 +17,7 @@ if the server does not make a distinction between internal and external resource
 	- hidden API endpoints that accept URLs as input, and input that gets inserted into HTML tags
 	- test found open redirect
 2. Provide Potentially Vulnerable Endpoints with Internal URLs
-	- test how they handle local redirect by set up 302 response, or JS using pipdream, or NGrok. also u can sleep(1000) before the redirect
+	- test how they handle local redirect by set up 302 response, or JS using pipdream, or NGrok, pingb.in, requestbin.com, webhook.site, canarytokens.org. also u can sleep(1000) before the redirect
 	- burp collaborator, intrach burp plug-in 
 3. Check the Results for A service banner, errors
 4. Since you cannot use blind SSRFs to read internal files or access internal services, u need to confirm it by explore internal network(Subnet scan), or port scan. and You can look especially for differences in response time and HTTP response codes, keep in mind may there are a firewall inplace.
@@ -78,3 +78,4 @@ Step 6: How to check which URL is vulnerable split -l 10 ssrf.txt output_file_
 
 
 other resources: file:///F:/Courses/02-cyber%20security/4-%20offensive%20security/PDFs/Offensive%20Security%20AWAE%20WEB-300%20OSWE.pdf page:437 a complete chapter(12) talked about how to exploit SSRF => port scanning, subnet scanning, mut more
+[Blind SSRF Chains](https://github.com/assetnote/blind-ssrf-chains)

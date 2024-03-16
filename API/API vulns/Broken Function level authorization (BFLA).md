@@ -20,5 +20,5 @@ vulnerability where a user of one role or group is able to access the API functi
 burp suite history tab is super powerful when u not have an api documentation, cuz it collect your requests while u interact with the api, after collecting your requests as UserA use the *Match and Replace* option to perform a large-scale replacement of a variable like an authorization token.
 - match and replace the authorization headers with UserB’s and repeat the requests
 
-##### if u discover BFLA try to test other vulns on behave the other user, such mass assignment(disable MFA, change his email,..) 
+##### if u discover BFLA try to test other vulns on behave the other user, such mass assignment(disable MFA, change his email,..)  or account take over ATO using self XSS
 
