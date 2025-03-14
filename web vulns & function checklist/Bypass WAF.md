@@ -44,6 +44,7 @@ X-Original-URI
 - random Case Switching
 - Encoding Payloads: urlenocde, base64, HTML
 	- ocus on the characters that may be blocked: `< > ( ) [ ] { } ; ' / \ |` 
+	- use HTML entities such `>` -> `&nvgt;`  , `<` -> `&nvlt;`
 - paly with HTTP headers: 
 	- change `Content-encodeing: random_text`
 

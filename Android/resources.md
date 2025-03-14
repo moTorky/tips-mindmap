@@ -12,3 +12,14 @@
 
 [HTTP Toolkit](https://httptoolkit.com/)
 
+practice on:
+- Allsafe
+- beetlebug
+- oversecured/ovaa
+
+
+### posts
+1. https://www.facebook.com/doctor.virus11/posts/1397264617053264
+2. https://twitter.com/LiveOverflow/status/1715122736308076671?t=KFZrGBG_Lu9HVuDP5BbSKQ&s=19
+
+https://www.facebook.com/root.kit.313/posts/1100636034321827?ref=embed_post

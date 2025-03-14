@@ -9,15 +9,26 @@
 	2. install frida in your system `pip install frida-tools`
 	3. check connection `frida-ls-devices`
 2. **embedded**: repackage the target app with frida-gadget library
-	1. used for know google/rooted/jailbrocken devices, here's how
+	1. used for non google/rooted/jailbrocken devices, here's how
 		1. `apktool d app.apk` , then place frida-gadget in the lib dir
-		2. add following to smali 
+		2. add following to ***smali*** to `oncreate` method, **or using objection patch mode** 
 			```Smali
 			const-string v0, "frida-gadget"
 			invoke-static {v0}, Ljava/lang/System;->loadLidrary(Ljava/lang/String;)V
 			```
-		1. repackage and sing the app , or use Objection to automate all above
-1. **preloaded**: by load frida library with the app 
+		1. if ***Native Library*** used then u need to modify ELF file to load our lib. or just use `LIEF` (Library to Instrument Executable Formats). 
+		``` python
+		import lief 
+		libnative = lief.parse("libnative.so") 
+		libnative.add_library("libinject.so") # Injection! 
+		libnative.write("libnative.so")
+		```
+		3. repackage and sing the app , or use Objection to automate all above
+1. **Preloading Symbols**: using functionalities offered by the loader of the operating system. we can load frida library with the app by modify `LD_PRELOAD` env variable. 
+>  **explanation**
+>  - Android OS has a interface called "Zygote Preloading" which preloads system libraries and classes defined under "doPreload" method
+> -  If your application calls a function, then the linker looks if it is available in the application itself first. If the symbol is not found, the linker checks all preloaded libraries and only then all the libraries which have been linked to your application
+	`setprop wrap.com.foo.bar LD_PRELOAD=/data/local/tmp/libpreload.so`
 ### frida-tools
 - `frida` used to attach process or spawn new one, get access to frida wrapper and execute JS commands
 - `frida-compile` , `frida-create` for compile C modules
@@ -34,7 +45,7 @@
 - `frida-trace -U -i "Java_*" <process_name>` : hock all method that start with `Java_`(java native calls) and create handler JS files under `__hanlers__` DIR  
 - `frida-trace -U -I "libssl*" <process_name>` : hock all modules that start with `libssl`(which add SSL layer to connections), and create handler JS files under `__hanlers__` DIR for every method, every file have `onEnter` , `onLeave` methods.   ___used for SSL paining bypass___
 
-#### frida ripple ([JS APIs and modules](https://frida.re/docs/javascript-api/))
+#### frida wrapper ([JS APIs and modules](https://frida.re/docs/javascript-api/))
 - `Process` 
 	- `id`: get attached process ID
 	- `enumerateModulesSync()` : list all loaded libraries or modules associated with attached process
@@ -43,8 +54,12 @@
 	- `enumerateLoadedClasses(callback)` list all loaded classes and use handler to interact with class using 
 		- handler have to methods `onMatch: function(clsName){}` and 
 		  `onComplete: function(clsName){}` 
-	- `perform(fn)` : run function on attached process
+	- `perform(fn)` : run function on attached process.
+		unlike Frida for iOS, in Android you need to wrap your code inside a `Java.perform` 
 	- `enumerateMethods(query)` list methods of a class. where query have form `"class!method"`
+	- `use()`
+	- `choose()`
+	- `class.getFields()` list a java fields 
 - `Socket`
 - `Script`
 - `Module`

@@ -24,4 +24,12 @@
 - [ ] find some how to use burp suite paid Edition => $`drfarfar`$
 - [ ]  [find information about how to obtain the API keys of popular recon services](https://github.com/lanmaster53/recon-ng-marketplace/wiki/API-Keys/)
 - [ ] take the time to understand how each tool in your testing toolkit works. Thus, before adding a tool to your workflow, be sure to take time to read the tool’s documentation and understand how it works. You should do this for all the recon and testing tools you 
-- [ ] read tools source code if it’s open source, by learning how others automate hacking, you’ll begin learning how to write your own tools as well. or modify exist tools and add new features 
+- [ ] read tools source code if it’s open source, by learning how others automate hacking, you’ll begin learning how to write your own tools as well. or modify exist tools and add new features
+
+
+
+---
+#### VPS
+- google cloud console 
+- github codespaces
+- segfault

@@ -27,3 +27,11 @@ subdomain takeover verification: https://0xpatrik.com/takeover-proofs/
 - [aquatone](https://github.com/michenriksen/aquatone)
 - [SubOver](https://github.com/Ice3man543/SubOver)
 - [subjack](https://github.com/haccer/subjack)
+### HOW SAML works
+1. user access resource (Service Provider)
+2. Service Provider generates a SAML Request to be sent to the Identity Provider, throw our browser
+3. IdP receives the SAML Request and provides some means of authentication; a login form or something similar
+4. The IdP validates us and  creates a SAML Response. The SAML Response contains the SAML Assertions necessary for the SP, passes through our browser
+	1. The Assertion usually includes the following information at a minimum: Indication that the Assertion is from the correct IdP, a NameID attribute specifying who the user is, and a digital signature.
+5. The IdP redirects us to the SP’s Assertion Consumer Service (ACS) URL
+6. The ACS validates the SAML Response.

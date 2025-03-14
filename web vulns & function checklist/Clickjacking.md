@@ -54,7 +54,7 @@ Two conditions must be met for a clickjacking vulnerability to happen.
 - [ ] collect pages contains state-changing actions. 
 - [ ] check that the action can be achieved via clicks alone. or a URL
 	> Attacks that require users to explicitly type in values are possible, but generally not feasible because they require so much social engineering. think about [[CSRF]]
-- [ ] go throw collected functions and check for `X-Frame-Options`, `Content-Security-Policy: frame-ancestors`, `SameSite` flag in HTTP response headers, **==if found no vulns there==**, if missing then start POC
+- [ ] go throw collected functions and check for `X-Frame-Options`, `Content-Security-Policy: frame-ancestors`, `SameSite` flag in HTTP response headers, **==if found and have value of same origin then no vulns there==**, if missing then start POC
 - [ ] Craft an HTML page that frames the target page
 	```html
 	<HTML>
@@ -69,6 +69,7 @@ Two conditions must be met for a clickjacking vulnerability to happen.
 - [ ] use [SET](https://github.com/trustedsec/social-engineer-toolkit/) to clone a website
 - [ ] place your `iframe` in place that frequently clicked such `Accept That This Site Uses Cookies! pop-up.` consider the larger impact of the vulnerability.
 - [ ] host it on http://pipdream.com/ or use Burp's [Clickbandit](https://portswigger.net/burp/documentation/desktop/tools/clickbandit) tool
+- [ ] visit https://securityheaders.com/, or https://clickjacker.io/ and paste the target URL. If the page loads successfully, it is vulnerable to clickjacking.
 ### Bypassing Protections
 -  `frame-busting` uses JavaScript code to check if the page is in an iframe
 	```js
