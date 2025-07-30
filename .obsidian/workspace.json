@@ -1,160 +1,200 @@
 {
   "main": {
-    "id": "978ca6a53a031cf5",
+    "id": "8daa7abb072cbf74",
     "type": "split",
     "children": [
       {
-        "id": "f591aa7347df8aaf",
+        "id": "b2a97c7b0a51bdef",
         "type": "tabs",
         "children": [
           {
-            "id": "43a5909a077046bc",
+            "id": "117e0c5495830daa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vulns checklist/OAuth.md",
+                "file": "ios/3. IOS Reverse Engineering/ARMv8 AArch64 Assembly.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "ARMv8 AArch64 Assembly"
             }
           },
           {
-            "id": "348018d190b48e0e",
+            "id": "16f87612c55a49a3",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "methodlogy.canvas",
-                "viewState": {
-                  "x": -640.5,
-                  "y": -396,
-                  "zoom": -2.792056296656164
-                }
-              }
+                "file": "ios/3. IOS Reverse Engineering/Steps.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Steps"
+            }
+          },
+          {
+            "id": "66d76cb2a1dea4fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "web vulns & function checklist/remote segfault access.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "remote segfault access"
+            }
+          },
+          {
+            "id": "57bc29a10d99b2ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Android/2. test & exploit/patching app.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "patching app"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "ed9f5fdfc99d55b6",
+    "id": "a9ae9f7f4fbbf48f",
     "type": "split",
     "children": [
       {
-        "id": "936e3c3559d8b880",
+        "id": "fa4399ce5ff6e0f8",
         "type": "tabs",
         "children": [
           {
-            "id": "8db2fe06a3499c0b",
+            "id": "b86bc6a0781d127c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
-            "id": "b420810da486508e",
+            "id": "e0ddf2632c2a4c0f",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": false,
+                "query": "wsman",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
-            "id": "b7a455c07b1a3ee1",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "ff7d582984c4ca98",
+            "id": "31b91c7a5cf06061",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 269.5
   },
   "right": {
-    "id": "a01cd5badbdd5b80",
+    "id": "9247dd4aaa9a7ccd",
     "type": "split",
     "children": [
       {
-        "id": "6e3f99bc5d24d747",
+        "id": "4f16c7589e1bce88",
         "type": "tabs",
         "children": [
           {
-            "id": "40f1926931aa6350",
+            "id": "98a3c78ff26ed4c9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "methodlogy.canvas",
+                "file": "Active Directory/6.1 enum win using cmd.md",
                 "collapseAll": false,
-                "extraContext": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 6.1 enum win using cmd"
             }
           },
           {
-            "id": "8ff8b76ea6a119d9",
+            "id": "d262f3542b8f27f7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "methodlogy.canvas",
+                "file": "Active Directory/sandbox detection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from sandbox detection"
             }
           },
           {
-            "id": "d24a15caa4e2a9e4",
+            "id": "947a2e90f6e56e0c",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
-            "id": "296116fbe30b59ab",
+            "id": "7953b3be1fd0c8e9",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "methodlogy.canvas"
-              }
+                "file": "Active Directory/sandbox detection.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of sandbox detection"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -171,62 +211,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "348018d190b48e0e",
+  "active": "66d76cb2a1dea4fa",
   "lastOpenFiles": [
-    "TODOs && ongoing projects.md",
-    "shodan.io && hunter.io.md",
-    "test.canvas",
-    "recon tool.md",
-    "posts.md",
-    "more recon && OSINT.md",
-    "Identify Interesting Assets to open it in burp.md",
-    "Google dorks.md",
-    "github.md",
-    "vulns checklist/Information Disclosure.md",
-    "vulns checklist/XXE.md",
-    "vulns checklist/XSS.md",
-    "vulns checklist/SSTI.md",
-    "vulns checklist/SSRF.md",
-    "vulns checklist/SSO.md",
-    "vulns checklist/SQLi.md",
-    "vulns checklist/SOP.md",
-    "vulns checklist/SAML.md",
-    "vulns checklist/RCE.md",
-    "vulns checklist/rate limit.md",
-    "vulns checklist/Race condition.md",
-    "vulns checklist/postmassages.md",
-    "vulns checklist/Password reset.md",
-    "vulns checklist/Open redirect.md",
-    "vulns checklist/OAuth.md",
-    "vulns checklist/JSONP.md",
-    "vulns checklist/insecure desterilization.md",
-    "hackerone.com/reports",
-    "hackerone.com",
-    "PDFs/Bug Bounty Bootcamp.pdf",
+    "Active Directory/12. persistence.md",
+    "Android/2. test & exploit/network/bypass certificate pining (hash).md",
+    "ios/3. IOS Reverse Engineering/Steps.md",
+    "ios/3. IOS Reverse Engineering/ARMv8 AArch64 Assembly.md",
+    "ios/2. IOS Pentest Basics/jail break.md",
+    "ios/2. IOS Pentest Basics/4. Dynamic & static Analysis.md",
+    "ios/2. IOS Pentest Basics/1. setup env.md",
+    "ios/2. IOS Pentest Basics/Frida.md",
+    "ios/2. IOS Pentest Basics/3. intercept Network traffic.md",
+    "Android/2. test & exploit/network/1. MITM.md",
+    "ios/2. IOS Pentest Basics/Objection.md",
+    "Android/Dynamic analysis/objection.md",
+    "Android/Dynamic analysis/Frida.md",
+    "ios/1. IOS Basics/2. security features.md",
+    "ios/1. IOS Basics/1. Architecture.md",
+    "ios/1. IOS Basics/4. inter-process communication.md",
+    "ios/1. IOS Basics/3. app structure.md",
+    "Pasted image 20250723171054.png",
+    "1_xlAAFqm-3S8AaC1Zo-WO_g.webp",
+    "Pasted image 20250722055617.png",
+    "osxlayers 1.gif",
+    "osxlayers.gif",
+    "ios/1. IOS Basics/5. app publishing.md",
+    "Android/1. pre/services.md",
+    "ios/4. IOS Attack surface",
+    "ios/Untitled.md",
+    "ios/3. IOS Reverse Engineering",
+    "ios/2. IOS Pentest Basics",
+    "ios/1. IOS Basics",
+    "Android/2. test & exploit/data storage/content provider.md",
+    "Android/2. test & exploit/patching app.md",
+    "Android/pentest banking app ` com.android.insecurebankv2`.md",
+    "Pasted image 20250719121722.png",
+    "Pasted image 20250719120928.png",
+    "Android/androguard.md",
+    "Android/2. test & exploit/data storage/Shared Preferences.md",
+    "Android/2. test & exploit/App components/Activity.md",
+    "Pasted image 20250716155601.png",
+    "Pasted image 20250713084931.png",
+    "Pasted image 20250713084906.png",
+    "PDFs/OWASP_MASTG.pdf",
+    "Android/0. setup env",
+    "PDFs/AndroidNotesForProfessionals.pdf",
     "methodlogy.canvas",
-    "Pasted image 20240205171112.png",
-    "Pasted image 20240205163555.png",
-    "PDFs/Real-World Bug Hunting - A Field Guide to Web Hacking by Peter Yaworski.pdf",
-    "PDFs/Hacking APIs - Early Access.pdf",
-    "API",
-    "PDFs/zseanos-methodology.pdf",
-    "Pasted image 20240129184215.png",
-    "Pasted image 20240129184130.png",
-    "PDFs/01-zseanos-methodology.pdf",
-    "vulns checklist/wstg-v4.2.pdf",
+    "Active Directory/Active_Directory_Enumeration_Attacks_Module_Cheat_Sheet.pdf",
+    "PDFs/Bug Bounty Bootcamp.pdf",
     "PDFs/Deserialization Vulnerability.pdf",
-    "Pasted image 20240123142644.png",
-    "Pasted image 20240126233433.png",
-    "Pasted image 20240126233509.png",
-    "Pasted image 20240127141951.png",
-    "Pasted image 20240127142042.png",
-    "Pasted image 20240127142650.png",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
-    "self hosted/shell.com/methodlogy 1.canvas",
-    "tips && mindmap/methodlogy.canvas",
-    "self hosted/trutrip/methodlogy 1.canvas",
-    "tips && mindmap/test.canvas",
-    "training/pwntilldown/Untitled.canvas"
+    "Untitled.canvas"
   ]
 }
