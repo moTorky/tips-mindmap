@@ -23,3 +23,7 @@ practice on:
 2. https://twitter.com/LiveOverflow/status/1715122736308076671?t=KFZrGBG_Lu9HVuDP5BbSKQ&s=19
 
 https://www.facebook.com/root.kit.313/posts/1100636034321827?ref=embed_post
+
+
+#### reports
+https://7asecurity.com/publications

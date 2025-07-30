@@ -1,5 +1,3 @@
-# **Content Providers**
-
 ### Why use Content Provider ?
 
 1. make abstraction layer between UI code and data store, which help to hide the way app use to store data (files, SQLite, push to web, other persistent storage )
@@ -41,3 +39,4 @@ _**grantUriPermission**_
 **resources**:
 
 follow this module to read data from other apps using Content Provider: [Link](file:///F:/Courses/04-Android/Udacity%20-%20Android%20Developer%20Nanodegree%20nd801%20v7.0.0/Part%2002-Module%2005-Lesson%2004_Content%20Providers/index.html)
+

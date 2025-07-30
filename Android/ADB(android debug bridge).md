@@ -55,6 +55,7 @@
     
     ```java
     adb logcat
+    add logcat --pid=$(adb shell pidof -s io.hextree.reversingexampl)
     adb logcat | grep "KEY"
     ```
     
@@ -89,6 +90,33 @@
     adb shell am start -n <package>/.<activity>
     adb shell am start -n com.example.app/.loggedInActivity
     ```
-
+- send click (touch screen) **input could send touch or fill input text**
+	``` bash
+	adb shell
+	input tap <x> <y>
+	# to find cordenites -> enable "pointer location" in devloper mode
+	```
+	![[Pasted image 20250706055540.png]]
+- Bluetooth HCI (adb could help in extract Bluetooth stack logs)  **only work in real device**
+	where Bluetooth stack logs is the way that devices used to transmit data by Bluetooth
+	```
+	1. connect to the bluetooth device (may it a tooth brush,...)
+	2. use the app 
+	3. dump the logs and open it using wireshark
+	adb bugreport <file_name.zip>
+	unzip <file_name.zip>
+	wireshark <file_name>/FS/data/misc/bluetooth/logs/btsnoop_hci.log
+	
+	where Pixel 2 is our real device
+	```
+	![[Pasted image 20250706095633.png]]
+- port forwarding 
+	![[Pasted image 20250706094848.png]]
+- reverse port forwarding
+	![[Pasted image 20250706094825.png]]
+- backup
+	```
+	adb backup -f all -all -apk -nosystem
+	```
 ##### more resources: 
 Github: https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8
