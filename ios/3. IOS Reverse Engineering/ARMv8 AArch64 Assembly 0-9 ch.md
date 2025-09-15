@@ -1,4 +1,4 @@
-resource: https://mariokartwii.com/armv8/
+  resource: https://mariokartwii.com/armv8/
 - A CPU doesn't understand any Human Language, but a CPU can understand two things. **0**'s and **1**'s.
 - Assembly Language is a human readable form of these blocks of 0's and 1's (CPU instructions)
 - _Assembler_ will take in a source text file written in a CPU's Assembly language, and will translate it into a hexadecimal representation
@@ -93,4 +93,36 @@ resource: https://mariokartwii.com/armv8/
 		// Copy the value of x1 into x0 using ORR
 		orr x0, xzr, x1
 		```
+- Loads & Stores & **Endianness**
+	- **Store**: moving data **from a register into memory**
+		- Store calculate effective address before moving data into memory, where `Effective Address = base register + offset
+		- Offsets may use:
+			- **UIMM12** (unsigned 12-bit)
+			- **sSIMM12**: Signed immediate 12-bit, scaled by access size (e.g., ×2, ×4, ×8)
+			- Another register `xB`
+		- **Double-word (64-bit)**: `str xD, [xA, #imm]` → offset × 8
+		offset must be multiblade by 8: cuz register is a 64-bit (8Bytes) 
+		- **Word (32-bit)**: `str wD, [xA, #imm]` → offset × 4 (upper 32 bits zeroed)
+		- **Half-word (16-bit)**: `strh wD, [xA, #imm]` → offset × 2 (lower 16 bits stored)
+		- **Byte (8-bit)**: `strb wD, [xA, #imm]` → offset × 1
+		: `str x29, [x3, #0x1B0]`: calculates address, then **copies entire 64-bit content** of `x29` into that location
+	- **Load**: moving data **from memory into a register**
+		- **Double-word**: `ldr xD, [xA, #imm]`
+		- **Word**: `ldr wD, [xA, #imm]` → top 32 bits of `xD` cleared
+		- **Half-word**: `ldrh wD, [xA, #imm]` → top 16 bits of `wD` cleared
+		- **Byte**: `ldrb wD, [xA, #imm]` → top 24 bits of `wD` cleared
+		- Loads also calculate effective address before copying data into the register
+	- Little‑Endian vs Big‑Endian
+		- **ARM64 defaults to Little‑Endian**
+	    - Can be configured to Big‑Endian, but rarely used in practice
+		- **Little‑Endian** = Least Significant Byte (LSB) is stored at the lowest memory address.
+		- If we store `0xEFCDAB8967452301` from a register into memory, it will be stored in reverse byte order:
+		```armasm
+		Memory[0] = 0x01
+		Memory[1] = 0x23
+		Memory[2] = 0x45
+		...
+		Memory[7] = 0xEF
+		```
+		When loaded back into a register, the correct 64-bit value `0xEFCDAB8967452301`
 - 

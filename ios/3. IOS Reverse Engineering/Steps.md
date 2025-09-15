@@ -12,6 +12,7 @@
 		ipsw swift-dump ./Payload/DVIA-v2.app/DVIA-v2 > ./swift_dump_mangled.txt
 		ipsw swift-dump ./Payload/DVIA-v2.app/DVIA-v2 | $SWIFT_DEMANGLE --simplified > ./swift_dump_demangled.txt
 		```
-3. analyze
+3. demangling: `xcrun swift-demangle`
+4. analyze
 	1. ghidra, and ida pro :)
 4. patch
