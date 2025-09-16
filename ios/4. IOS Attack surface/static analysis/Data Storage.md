@@ -34,3 +34,5 @@ IOS caches user input in order to provide features such as form completion and p
 - the application must not allow suggestion or autocorrection
 	![[Pasted image 20250912150727.png]]
 - Stored in `/private/var/mobile/Library/Keyboard/dynamic-text.dat` , use `strings`
+### google maps api scanner
+

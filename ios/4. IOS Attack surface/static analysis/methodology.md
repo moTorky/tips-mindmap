@@ -84,9 +84,26 @@ Automating Analysis
 	>> Use Passion Fruit, works with frida 12 only
 
 ------
+Dump and Decrypt the app in runtime if it's installed from App Store
+Check the JailBreak Detection 
+	> Tools in iPhone (cydia tweaks)
+	> frida scipts(code share) and objection 
+		> pass either the function to change its value or the address
+	> get the classes and methods, search and patch on flex
+	> static analysis(reverse it)
+Understand the application Logic while loggin the application activity
+Check anti-tampering  
+Bypass SSL Pinning with SSL Kill Switch to intercept and test the webview, check if the requests and responses are logged
+Check the Data Directory of the application
+Dump the memory and search for sensitive data
+Check the snapshot 
+Check if the screenshot is allowed wwhile using the App
+Check the cache and the suggestion and auto correction of sensitive text fields
 
+----
 
 side notes:
 - most of ios tools don't work all time, so u need to search in the community, and keep updated
 - all about try and error, in reverse, or in runtime manipulation
-- don't assum somthing, untill u try it
+- don't assum somthing, untill u try it.
+- for app crashing -> trace `exist` method, one of them used to exist the app , may in jailbreak, debuger.
