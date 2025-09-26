@@ -8,9 +8,11 @@
 
 ----
 > Swift name Mangling 
-	>> combinig the classes, functions, methods, the binary, parameters, attributes ..etc in one line that ends with _T_
+	>> combining the classes, functions, methods, the binary, parameters, attributes ..etc in one line that ends with _T_
 	>> `xcrun swift-demangle`
 		>> this will demangle and return the normal writing of the swift code
+	>>  Use `ipsw swift-dump <binary-name> --demangle > file.txt`
+	>>  use `nm` , `llvm-objdump`
 
 ----
 Applications are compiled normally without encryption, however when they are on app store they are encrypted according to Apple Fair Play Encryption to prevent the reverse engineering

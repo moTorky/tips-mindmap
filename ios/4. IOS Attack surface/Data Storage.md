@@ -16,10 +16,19 @@ ios keychain dump
 not encrypted bydefult
 • NSUserDefaults: Can store small pieces of data, such as user preferences and application
 settings. {lang, theame,..}
+`ios nsuserdefaults get`
 • CoreData: A framework that allows storing persistent app data.
+```
+cd /var/mobile/Containers/Data/Application/7FCF2094-20EE-4734-8D47-3D0B47A7145A/Library/Application Support
+sqlite connect Model.sqlite
+```
 • SQLite DB: iOS applications can use SQLite databases through an SQLite library.
 • Realm DB: A local database, alternative to SQLite.
 • Couchbase Lite: A lightweight database with a native iOS implementation.
+```
+cd /var/mobile/Containers/Data/Application/7FCF2094-20EE-4734-8D47-3D0B47A7145A/Library/Application Support/CouchbaseLite
+sqlite connect db.sqlite3
+```
 • Plist: Files that store hierarchical serialized data, same to manifest.xml of android .
 	a plist file could be embeded inside other plist file; use `plistsubstractor` for extraction
 ```
@@ -34,5 +43,9 @@ IOS caches user input in order to provide features such as form completion and p
 - the application must not allow suggestion or autocorrection
 	![[Pasted image 20250912150727.png]]
 - Stored in `/private/var/mobile/Library/Keyboard/dynamic-text.dat` , use `strings`
+- `ios pastboard monitor`
 ### google maps api scanner
 
+
+all listed here: 
+https://mas.owasp.org/MASTG/tests/ios/MASVS-STORAGE/MASTG-TEST-0052/
