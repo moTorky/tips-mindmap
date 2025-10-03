@@ -10,6 +10,11 @@ i'm try to collect all in one place, this impossible in pentesting field since t
 - update API vuln preps and checklist
 - update my recon methodology 
 - add some ideas from twitter and new public disclose HackerOne reports
+#### How To Use
+- every domain have
+	1. setup environment
+	2. Pre knowledge
+	3. pentest methodology or test cases
 #### resources
 - Bug Bounty bootcamp book by Vickie Li
 - Real-World Bug Hunting - A Field Guide to Web Hacking by Peter Yaworski book
